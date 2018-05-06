@@ -1,0 +1,177 @@
+@import '../sass/_global/_mixin.scss';
+
+.todoframe{
+    @include mb-height(50px, 50px);
+    @include mb-width(200px, 360px);
+    @include mb-margin-hori(auto, auto);
+    margin-left: 0px;
+    background-color: #696969;
+    border-radius: 8px;
+    @include mb-margin-bottom(10px, 16px);
+    font-family: PingFangSC-Medium;
+
+    .title {
+        @include dt-text-11;
+        color: #303030;
+        text-align: left;
+        line-height: 30px;
+        @include mb-margin-left(10px, 16px);
+        @include mb-margin-right(10px, 15px);
+        @include mb-padding-verti(10px, 10px);
+        position: relative;
+    }
+
+    .title:hover {
+        position: relative;
+        .deletbutton{ 
+            position: absolute;
+            display: block;
+            top: 12px;
+            right: 10px;
+            img {
+                @include mb-height(30px, 30px);
+                @include mb-width(30px, 30px);
+            }
+        }
+
+        .editbutton{ 
+            position: absolute;
+            display: block;
+            top: 12px;
+            right: 50px;
+            img {
+                @include mb-height(30px, 30px);
+                @include mb-width(30px, 30px);
+            }
+        }
+
+        .editbutton:hover {
+            border: solid 1px gray; 
+        }
+
+        .deletbutton:hover {
+            border: solid 1px gray;
+            
+        }
+    }
+
+    .deletbutton, .editbutton{
+        display: none;
+    }
+}
+
+.todoframe:hover{ 
+    @include mb-height(50px, 64px);
+    .timer {
+        overflow: auto; 
+        position: relative;
+        top: -14px;
+        @include dt-text-10;
+        display: block;
+        @include mb-width(200px, 329px);
+        @include mb-height(18px, 18px);
+        @include mb-margin-left(10px, 16px);
+        @include mb-margin-right(10px, 15px);
+        margin-bottom: 14px;
+        text-align: left;
+        .floatoneline {   
+            float: left;  
+        } 
+    }
+}
+
+.timer {
+    display: none;
+}
+
+ul {
+    padding: 0px;
+}
+
+.blink_me {
+    animation: blinker 1s linear infinite;
+  }
+  
+@keyframes blinker {
+      50% {
+      opacity: 0;
+    }
+}
+
+
+.searchInput {
+    position: absolute;
+        top: 0px;
+        left: -18px;
+        @include mb-height(30px, 30px);
+        @include mb-width(200px, 329px);
+        @include mb-margin-verti(10px, 10px);
+        margin-left: 16px;
+        margin-right: 15px;
+        background-color: #696969;
+        border-width: 0px;
+        @include dt-text-11;
+        font-family: PingFangSC-Medium;
+        text-align: left;
+        line-height: 30px;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    -webkit-transform: translateX(15px);
+            transform: translateX(15px);
+    opacity: 0;
+    pointer-events: none
+  }
+
+  .searchInput:focus {
+    outline: none;
+  }
+
+  .searchInput.active {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+.timer_active {
+    background-color:#39DC9C;
+    @include mb-height(50px, 100px);
+    @include mb-width(200px, 360px);
+    .timer { 
+        overflow: auto; 
+        position: relative;
+        top: -18px;
+        @include dt-h-main-10;
+        display: block;
+        @include mb-width(100px, 200px);
+        @include mb-height(18px, 67px);
+        @include mb-margin-left(10px, 16px);
+        @include mb-margin-right(10px, 15px);
+        text-align: left;  
+        .floatoneline {   
+            float: left;  
+        } 
+    }
+    .deletbutton{
+        display: none;
+    }
+}
+ 
+.timer_active:hover {
+    background-color:#39DC9C;
+    @include mb-height(50px, 100px);
+    @include mb-width(200px, 360px);
+    .timer { 
+        top: -18px;
+        @include dt-h-main-10;
+        display: block;
+        @include mb-width(100px, 200px);
+        @include mb-height(18px, 67px);
+        @include mb-margin-left(10px, 16px);
+        @include mb-margin-right(10px, 15px);
+        text-align: left;   
+    }
+    .deletbutton{
+        display: none;
+    }
+}

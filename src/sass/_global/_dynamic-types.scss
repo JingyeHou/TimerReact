@@ -1,0 +1,35 @@
+@import "mixin/media";
+@import "mixin/dynamic-types";
+
+// title
+.dt-title-10 {
+    @include dt-title-10();
+}
+
+// headline
+.dt-h-main-11 {
+    @include dt-h-main-09();
+}
+
+.dt-h-main-11 {
+    @include dt-h-main-08();
+}
+.dt-text-11 {
+    @include dt-text-11();
+}
+
+.dt-text-color-white-10 {
+    @include dt-text-color-white-10();
+}
+
+.dt-text-color-white-09 {
+    @include dt-text-color-white-09();
+}
+
+.dt-text-color-black-10 {
+    @include dt-text-color-black-10();
+}
+
+.dt-text-color-black-09 {
+    @include dt-text-color-black-09();
+}

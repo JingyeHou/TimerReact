@@ -1,0 +1,68 @@
+@import "media";
+
+@mixin dt-h-main-10 {
+    @include mb-font-size(40px, 48px);
+}
+
+@mixin dt-h-main-09 {
+    @include mb-font-size(24px, 30px);
+    font-weight: 300;
+}
+
+@mixin dt-h-main-08 {
+    @include mb-font-size(20px, 24px);
+    font-weight: 300;
+}
+
+@mixin dt-title-10 {
+    @include mb-font-size(20px, 24px);
+}
+
+// text
+@mixin dt-text-11 {
+    @include mb-font-size(18px, 20px);
+}
+
+@mixin dt-text-10 {
+    @include mb-font-size(14px, 16px);
+}
+
+@mixin dt-text-color-white-10 {
+    color: #f0f0f0;
+}
+
+@mixin dt-text-color-white-09 {
+    color: #c7c7c7;
+}
+
+@mixin dt-text-color-black-10 {
+    color: #333333;
+}
+
+@mixin dt-text-color-black-09 {
+    color: #6c6c6c;
+}
+
+@mixin dt-text-line-height-11 {
+    @include mb-line-height(1.6em, 1.8em);
+}
+
+@mixin dt-text-line-height-10 {
+    @include mb-line-height(1.6em, 1.6em);
+}
+
+@mixin dt-text-line-height-09 {
+    line-height: 1.4em;
+}
+
+@mixin dt-text-line-height-08 {
+    line-height: 1.2em;
+}
+
+@mixin clearfix() {
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}

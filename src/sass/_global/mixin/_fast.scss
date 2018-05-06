@@ -1,0 +1,19 @@
+@mixin margin-hori($list) {
+    margin-left: $list;
+    margin-right: $list;
+}
+
+@mixin margin-verti($list) {
+    margin-top: $list;
+    margin-bottom: $list;
+}
+
+@mixin padding-hori($list) {
+    padding-left: $list;
+    padding-right: $list;
+}
+
+@mixin padding-verti($list) {
+    padding-top: $list;
+    padding-bottom: $list;
+}

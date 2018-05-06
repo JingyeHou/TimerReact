@@ -1,0 +1,218 @@
+$media-limit-width-small: 400px;
+$media-limit-width-middle: 1000px;
+$media-limit-width-large: 1200px;
+
+@mixin media-l {
+    @media screen and (min-width: $media-limit-width-middle) and (max-width: $media-limit-width-large - 1) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media screen and (min-width: $media-limit-width-large) {
+        @content;
+    }
+}
+
+@mixin media-compact {
+    @media screen and (max-width: $media-limit-width-middle - 1) {
+        @content;
+    }
+}
+
+@mixin media-regular {
+    @media screen and (min-width: $media-limit-width-middle) {
+        @content;
+    }
+}
+
+@mixin set-on-media($prop, $list-on-compact, $list-on-regular) {
+    @include media-compact {
+        #{$prop}: $list-on-compact;
+    }
+    @include media-regular {
+        #{$prop}: $list-on-regular;
+    }
+}
+
+@mixin mb-font-size($font-size1, $font-size2) {
+    @include media-compact {
+        font-size: $font-size1;
+    }
+    @include media-regular {
+        font-size: $font-size2;
+    }
+}
+
+@mixin mb-text-align($value1, $value2) {
+    @include media-compact {
+        text-align: $value1;
+    }
+    @include media-regular {
+        text-align: $value2;
+    }
+}
+
+@mixin mb-line-height($value1, $value2) {
+    @include media-compact {
+        line-height: $value1;
+    }
+    @include media-regular {
+        line-height: $value2;
+    }
+}
+
+@mixin mb-margin-top($value1, $value2) {
+    @include media-compact {
+        margin-top: $value1;
+    }
+    @include media-regular {
+        margin-top: $value2;
+    }
+}
+
+@mixin mb-margin-bottom($value1, $value2) {
+    @include media-compact {
+        margin-bottom: $value1;
+    }
+    @include media-regular {
+        margin-bottom: $value2;
+    }
+}
+
+@mixin mb-margin-left($value1, $value2) {
+    @include media-compact {
+        margin-left: $value1;
+    }
+    @include media-regular {
+        margin-left: $value2;
+    }
+}
+
+@mixin mb-margin-right($value1, $value2) {
+    @include media-compact {
+        margin-right: $value1;
+    }
+    @include media-regular {
+        margin-right: $value2;
+    }
+}
+
+@mixin mb-margin($value1, $value2) {
+    @include media-compact {
+        margin: $value1;
+    }
+    @include media-regular {
+        margin: $value2;
+    }
+}
+
+@mixin mb-margin-verti($value1, $value2) {
+    @include mb-margin-top($value1, $value2);
+    @include mb-margin-bottom($value1, $value2);
+}
+
+@mixin mb-margin-hori($value1, $value2) {
+    @include mb-margin-left($value1, $value2);
+    @include mb-margin-right($value1, $value2);
+}
+
+@mixin mb-padding-top($value1, $value2) {
+    @include media-compact {
+        padding-top: $value1;
+    }
+    @include media-regular {
+        padding-top: $value2;
+    }
+}
+
+@mixin mb-padding-bottom($value1, $value2) {
+    @include media-compact {
+        padding-bottom: $value1;
+    }
+    @include media-regular {
+        padding-bottom: $value2;
+    }
+}
+
+@mixin mb-padding-left($value1, $value2) {
+    @include media-compact {
+        padding-left: $value1;
+    }
+    @include media-regular {
+        padding-left: $value2;
+    }
+}
+
+@mixin mb-padding-right($value1, $value2) {
+    @include media-compact {
+        padding-right: $value1;
+    }
+    @include media-regular {
+        padding-right: $value2;
+    }
+}
+
+@mixin mb-padding($value1, $value2) {
+    @include media-compact {
+        padding: $value1;
+    }
+    @include media-regular {
+        padding: $value2;
+    }
+}
+
+@mixin mb-padding-verti($value1, $value2) {
+    @include mb-padding-top($value1, $value2);
+    @include mb-padding-bottom($value1, $value2);
+}
+
+@mixin mb-padding-hori($value1, $value2) {
+    @include mb-padding-left($value1, $value2);
+    @include mb-padding-right($value1, $value2);
+}
+
+@mixin mb-width($value1, $value2) {
+    @include media-compact {
+        width: $value1;
+    }
+    @include media-regular {
+        width: $value2;
+    }
+}
+
+@mixin mb-height($value1, $value2) {
+    @include media-compact {
+        height: $value1;
+    }
+    @include media-regular {
+        height: $value2;
+    }
+}
+
+@mixin mb-min-height($value1, $value2) {
+    @include media-compact {
+        min-height: $value1;
+    }
+    @include media-regular {
+        min-height: $value2;
+    }
+}
+
+@mixin mb-max-height($value1, $value2) {
+    @include media-compact {
+        max-height: $value1;
+    }
+    @include media-regular {
+        max-height: $value2;
+    }
+}
+
+@mixin mb-top($value1, $value2) {
+    @include media-compact {
+        top: $value1;
+    }
+    @include media-regular {
+        top: $value2;
+    }
+}

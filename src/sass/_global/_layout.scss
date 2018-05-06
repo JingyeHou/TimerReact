@@ -1,0 +1,31 @@
+@import "mixin";
+
+.hori-fill {
+    @include margin-hori(auto);
+}
+
+.hori-block {
+    @include media-xl {
+        width: 1000px;
+        @include margin-hori(auto);
+    }
+
+    @include media-l {
+        width: 800px;
+        @include margin-hori(auto);
+    }
+
+    @include media-compact {
+        @include margin-hori(14px);
+    }
+}
+.hori-inner {
+    @include media-regular {
+        @include margin-hori(20px);
+    }
+    @include media-compact {
+        @include margin-hori(14px);
+    }
+
+    @include clearfix();
+}

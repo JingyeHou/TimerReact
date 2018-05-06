@@ -1,0 +1,33 @@
+@import './sass/_global/_mixin.scss';
+.app {
+    text-align: center;
+  }
+  
+  .logo {
+    animation: App-logo-spin infinite 2s linear;
+    height: 80px;
+    padding-top: 80px;
+  }
+  
+  .header {
+    background-color: lighten(#222, 10%);
+    height: 300px;
+    padding: 20px;
+    color: white;
+  }
+  
+  @keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+
+  .todolist{
+    margin-top: 30px;
+    @include mb-padding-verti(20px, 20px);
+    @include mb-margin-hori(auto, auto);
+    background-color: lighten(#222, 10%);
+    @include mb-width(200px, 400px);
+    min-height: 500px;
+  }
+  
